@@ -1,35 +1,45 @@
-.lifebuoys {
-  width: 20vw;
-  height: 15vh;
-  background: deepskyblue;
+/* http://meyerweb.com/eric/tools/css/reset/
+ * * v2.0 | 20110126
+ * * License: none (public domain) */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 
-.prizes {
-  width: 20vw;
-  height: 50vh;
-  background: aliceblue;
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
 }
 
-.right-section {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-direction: column;
-  width: 30vw;
-  height: 100vh;
-  background: blue;
+body {
+  line-height: 1;
 }
 
-.logo {
-  width: 20vw;
-  height: 20vw;
-  background: fuchsia;
+ol, ul {
+  list-style: none;
 }
 
-.question {
-  width: 50vw;
-  height: 10vh;
-  background: greenyellow;
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 .answers {
@@ -45,10 +55,38 @@
 .answer {
   width: 20vw;
   height: 10vh;
-  background: aqua;
+  background: blue;
 }
 
-.left-section {
+.lifebuoys {
+  width: 20vw;
+  height: 15vh;
+  background: black;
+}
+
+.logo {
+  width: 20vw;
+  height: 20vw;
+  background: yellow;
+}
+
+.prizes {
+  width: 20vw;
+  height: 50vh;
+  background: yellow;
+}
+
+.question {
+  width: 50vw;
+  height: 10vh;
+  background: lime;
+}
+
+.main-container {
+  display: flex;
+  justify-content: space-around;
+}
+.main-container__left {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -57,9 +95,14 @@
   height: 100vh;
   background: red;
 }
-
-.main-container {
+.main-container__right {
   display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  width: 30vw;
+  height: 100vh;
+  background: blue;
 }
 
 /*# sourceMappingURL=style.css.map */
