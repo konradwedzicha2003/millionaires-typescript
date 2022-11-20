@@ -1,8 +1,9 @@
 import React from "react";
+import './Lifebuoys.scss'
 
 const Lifebuoys = () => {
     return (
-        <div className='lifebuoys'>Koła ratunkowe</div>
+        <div className='Lifebuoys'>Koła ratunkowe</div>
     )
 }
 

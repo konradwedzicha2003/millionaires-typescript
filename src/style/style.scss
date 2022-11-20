@@ -42,22 +42,6 @@ table {
   border-spacing: 0;
 }
 
-.answers {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-wrap: wrap;
-  width: 50vw;
-  height: 30vh;
-  background: yellow;
-}
-
-.answer {
-  width: 20vw;
-  height: 10vh;
-  background: blue;
-}
-
 .lifebuoys {
   width: 20vw;
   height: 15vh;
@@ -104,5 +88,3 @@ table {
   height: 100vh;
   background: blue;
 }
-
-/*# sourceMappingURL=style.css.map */

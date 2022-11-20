@@ -1,8 +1,9 @@
 import React from "react";
+import './Logo.scss'
 
 const Logo = () => {
     return (
-        <div className="logo">Logo</div>
+        <div className="Logo">Logo</div>
     )
 }
 

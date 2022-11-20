@@ -1,8 +1,9 @@
 import React from "react";
+import './Prizes.scss'
 
 const Prizes = () => {
     return (
-        <div className='prizes'>Nagrody</div>
+        <div className='Prizes'>Nagrody</div>
     )
 }
 

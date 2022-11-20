@@ -1,19 +1,20 @@
 import React from "react";
 import Logo from "./logo/Logo";
 import Question from "./question/Question";
-import Answers from "./answers/Answers";
+import Answers from "./answersContainer/AnswersContainer";
 import Lifebuoys from "./lifebuoys/Lifebuoys";
 import Prizes from "./prizes/Prizes";
+import './Main-container.scss'
 
 const MainContainer = () => {
     return (
-        <main className='main-container'>
-            <section className='main-container__left'>
+        <main className='Main-container'>
+            <section className='Main-container__left'>
                 <Logo/>
                 <Question/>
                 <Answers/>
             </section>
-            <section className='main-container__right'>
+            <section className='Main-container__right'>
                 <Lifebuoys/>
                 <Prizes/>
             </section>

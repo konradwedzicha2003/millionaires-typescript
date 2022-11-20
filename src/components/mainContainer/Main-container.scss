@@ -1,0 +1,26 @@
+@import "../../style/variables/variables";
+
+.Main-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.Main-container__left {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  width: 70vw;
+  height: 100vh;
+  background: $darker-yellow;
+}
+
+.Main-container__right {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  width: 30vw;
+  height: 100vh;
+  background: blue;
+}
