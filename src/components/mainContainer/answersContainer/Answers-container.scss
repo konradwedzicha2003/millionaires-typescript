@@ -1,5 +1,9 @@
 .Answers-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
   width: 60vw;
-  height: 20vh;
+  height: 40vh;
   background: pink;
 }

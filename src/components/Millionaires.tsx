@@ -1,5 +1,5 @@
 import React from "react";
-import MainContainer from "./main-container/MainContainer";
+import MainContainer from "./mainContainer/MainContainer";
 
 const Millionaires = () => {
     return (

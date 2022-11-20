@@ -1,10 +1,14 @@
 import React from "react";
 import './Single-answer.scss'
 
-const SingleAnswer = () => {
+export interface props {
+    answerContent: string
+}
+
+const SingleAnswer = ({answerContent}: props) => {
 
     return (
-        <div>single answer</div>
+        <div className='Single-answer'>{answerContent}</div>
     )
 }
 

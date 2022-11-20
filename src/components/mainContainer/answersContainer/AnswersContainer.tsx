@@ -3,19 +3,18 @@ import './Answers-container.scss'
 import SingleAnswer from "./singleAnswer/SingleAnswer";
 import {questionAndAnswers} from "../../../data/questionsAndAnswers/questionsAndAnswers";
 
-export interface answerContentProps {
-    answerContent: string
-}
-
-const AnswersContainer = ({answerContent}: answerContentProps) => {
+const AnswersContainer = () => {
 
     const answers = questionAndAnswers[0].answers
-
+    console.log(typeof answers[0].answer)
     return (
         <div className='Answers-container'>
-            <div className='line line__answer-through-bigger-resolution'/>
-            <div className='line line__answer-through-bigger-resolution'/>
-            <SingleAnswer/>
+            {/*<div className='line line__answer-through-bigger-resolution'/>*/}
+            {/*<div className='line line__answer-through-bigger-resolution'/>*/}
+
+            {answers.map(el => {
+                return <SingleAnswer answerContent={el.answer}/>
+            })}
         </div>
     )
 }
