@@ -1,9 +1,38 @@
+@import "src/style/mixins/mixins";
+
 .Answers-container {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-wrap: wrap;
-  width: 60vw;
-  height: 40vh;
-  background: pink;
+  margin: 1rem 0;
+
+  &__line {
+    @include white-horizontal-line;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .Answers-container {
+    margin: 3rem 0;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .Answers-container {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 5rem 0;
+
+    &__line {
+      width: 100%
+    }
+
+    &__line:first-child {
+      top: 3.75rem;
+    }
+
+    &__line:nth-child(2){
+      bottom: 3.75rem;
+    }
+  }
 }

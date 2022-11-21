@@ -1,9 +1,16 @@
 import React from "react";
 import './Lifebuoys.scss'
+import AskAudience from "./AskAudience/AskAudience";
+import FiftyFifty from "./FiftyFifty/FiftyFifty";
+import PhoneFriend from "./PhoneFriend/PhoneFriend";
 
 const Lifebuoys = () => {
     return (
-        <div className='Lifebuoys'>Koła ratunkowe</div>
+        <div className="Lifebuoys">
+            <AskAudience/>
+            <FiftyFifty/>
+            <PhoneFriend/>
+        </div>
     )
 }
 

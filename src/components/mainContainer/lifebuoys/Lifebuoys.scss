@@ -1,5 +1,13 @@
+@import 'src/style/mixins/mixins';
+
 .Lifebuoys {
-  width: 20vw;
-  height: 15vh;
-  background: red;
+  @include flex-center-center;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+@media screen and (min-width: 1100px){
+  .Lifebuoys {
+    margin-top: 0;
+  }
 }

@@ -3,7 +3,14 @@ import './Question.scss'
 
 const Question = () => {
     return (
-        <div className='Question'>Pytanie</div>
+        <div className='Question'>
+            <div className='Question__squares'/>
+            <div className='Question__squares'/>
+            <div className="Question__line"/>
+            <div className='Question__content'>
+                <p>Pytanie</p>
+            </div>
+        </div>
     )
 }
 
