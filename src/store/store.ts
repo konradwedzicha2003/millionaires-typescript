@@ -1,15 +1,15 @@
 import {createStore, combineReducers} from "redux";
-import questionsAndAnswersReducer from "./questionsAndAnswersReducer/questionsAndAnswersReducer";
-import prizesReducer from "./prizesReducer/prizesReducer";
+import questionsAndAnswers from "./reducers/questionsAndAnswers/questionsAndAnswers";
+import prizes from "./reducers/prizes/prizes";
 
 const allReducers = combineReducers({
-    data: questionsAndAnswersReducer,
-    prizes: prizesReducer
+    questionsAndAnswers,
+    prizes
 })
 
 const store = createStore(
     allReducers,
-    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+    window.__REDUX_DEVTOOLS_EXTENSION__  && window.__REDUX_DEVTOOLS_EXTENSION__()
 )
 
 export default store
