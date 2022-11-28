@@ -3,8 +3,8 @@ import './Fifty-fifty.scss'
 
 const FiftyFifty = () => {
     return (
-        <div className='Fifty-fifty'>
-            <button className="Fifty-fifty__button"/>
+        <div className='fifty-fifty'>
+            <button className="fifty-fifty__button"/>
             <p>50:50</p>
         </div>
     )

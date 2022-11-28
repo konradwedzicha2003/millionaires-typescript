@@ -4,9 +4,9 @@ import logo from '../../../assets/logo.png'
 
 const Logo = () => {
     return (
-        <div className="Logo">
-            <img className="Logo__img" src={logo} alt="Logo milionerzy"/>
-            <div className="Logo__animation-box"/>
+        <div className="logo">
+            <img className="logo__img" src={logo} alt="Logo milionerzy"/>
+            <div className="logo__animation-box"/>
         </div>
     )
 }

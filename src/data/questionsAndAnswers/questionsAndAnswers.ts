@@ -1,3 +1,10 @@
+export const answersLetters = [
+    {letter: 'A'},
+    {letter: 'B'},
+    {letter: 'C'},
+    {letter: 'D'},
+]
+
 export const questionAndAnswers = [
 
     {   question: 'question 1',

@@ -1,28 +1,67 @@
-import React from "react";
+import React, { useState } from "react";
 import './Single-answer.scss'
+import store from "../../../../store/store";
+import {answersLetters} from "../../../../data/questionsAndAnswers/questionsAndAnswers";
 
 export interface SingleAnswerProps {
     answerContent: string,
     isCorrect: boolean,
+    index: number
+    isDisabled: boolean,
+    setIsAnswerDisabled: React.Dispatch<React.SetStateAction<boolean>>
 }
 
-const SingleAnswer = ({answerContent, isCorrect}: SingleAnswerProps) => {
+const SingleAnswer = ({answerContent, isCorrect, isDisabled, index, setIsAnswerDisabled}: SingleAnswerProps) => {
+
+    const [isPending, setIsPending] = useState(false)
+    const [showAnswer, setShowAnswer] = useState(false)
+
+    const checkAnswer = () => {
+        setIsAnswerDisabled(true)
+        setIsPending(true)
+        setTimeout(markAnswer, 2000)
+    }
+
+    const markAnswer = () => {
+        setIsPending(false)
+        setShowAnswer(true)
+        isCorrect
+            ? setTimeout(nextQuestion, 2000)
+            : gameOver()
+    }
+
+    const nextQuestion = () => {
+        setShowAnswer(false)
+        setIsAnswerDisabled(false)
+        store.dispatch({type: "answerCorrect"})
+    }
+
+    const gameOver = () => {
+        setIsAnswerDisabled(true)
+    }
 
     return (
-        <li key={answerContent} className='Single-answer'>
-            <div className='Single-answer__squares Single-answer__squares--first'/>
-            <div className='Single-answer__squares Single-answer__squares--second'/>
-            <button value={`${isCorrect}`} className='Single-answer__onclick'>
-                <div className='Single-answer__onclick-squares Single-answer__onclick-squares--first'/>
-                <div className='Single-answer__onclick-squares Single-answer__onclick-squares--second'/>
+        <li className={`${
+            isPending ? 'single-answer single-answer--checking' : 'single-answer'} ${
+            showAnswer ? isCorrect ? 'single-answer--correct' : 'single-answer--incorrect' : ''}`}
+        >
+            <div className='single-answer__squares single-answer__squares--first'/>
+            <div className='single-answer__squares single-answer__squares--second'/>
+            <button
+                onClick={checkAnswer}
+                className='single-answer__onclick'
+                disabled={isDisabled}
+            >
+                <div className='single-answer__onclick-squares single-answer__onclick-squares--first'/>
+                <div className='single-answer__onclick-squares single-answer__onclick-squares--second'/>
                 </button>
-            <div className='Single-answer__line'/>
-            <span className='Single-answer__content'>
-                    <div className='Single-answer__dot-letter-box'>
-                        <div className='Single-answer__dot'/>
-                        <div className='Single-answer__letter'>A:</div>
-                    </div>
-                    <p>{answerContent}</p>
+            <div className='single-answer__line'/>
+            <span className='single-answer__content'>
+                <div className='single-answer__dot-letter-box'>
+                    <div className='single-answer__dot'/>
+                    <div className='single-answer__letter'>{answersLetters[index].letter}:</div>
+                </div>
+                <p>{answerContent}</p>
                 </span>
         </li>
     )

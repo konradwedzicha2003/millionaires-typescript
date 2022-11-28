@@ -8,12 +8,12 @@ const Question = () => {
     const question = useSelector(getCurrentQuestion)
 
     return (
-        <div className='Question'>
-            <div className='Question__squares'/>
-            <div className='Question__squares'/>
-            <div className="Question__line"/>
-            <div className='Question__content'>
-                <p>Pytanie</p>
+        <div className='question'>
+            <div className='question__squares'/>
+            <div className='question__squares'/>
+            <div className="question__line"/>
+            <div className='question__content'>
+                <p>{question}</p>
             </div>
         </div>
     )

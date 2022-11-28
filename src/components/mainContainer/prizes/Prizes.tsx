@@ -10,7 +10,7 @@ const Prizes = () => {
     const prizes = useSelector(getPrizes)
 
     return (
-        <ol className='Prizes'>
+        <ol className='prizes'>
             {prizes.map((el: Prize,index: number) => {
                 return <SinglePrize
                     key={el.number}

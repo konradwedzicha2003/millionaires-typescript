@@ -1,4 +1,6 @@
-.Logo {
+@import "src/style/variables/variables";
+
+.logo {
   position: relative;
   width: 18rem;
   margin: 2rem 0;
@@ -19,8 +21,8 @@
   }
 }
 
-@media screen and (min-width: 1400px) {
-  .Logo {
+@media screen and (min-width: $big-screen) {
+  .logo {
     width: 30rem;
     margin: 3rem 0;
 

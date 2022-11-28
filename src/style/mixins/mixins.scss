@@ -47,3 +47,7 @@
 @mixin hover-blue-glow-effect {
   box-shadow: 0 0 2rem 0.5rem $hover-blue-glow;
 }
+
+@mixin wide-screen {
+  max-width: 110px;
+}

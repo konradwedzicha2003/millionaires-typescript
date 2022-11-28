@@ -8,13 +8,13 @@ import './Main-container.scss'
 
 const MainContainer = () => {
     return (
-        <main className='Main-container'>
-            <section className='Main-container__left'>
+        <main className='main-container'>
+            <section className='main-container__left'>
                 <Logo/>
                 <Question/>
                 <AnswersContainer/>
             </section>
-            <section className='Main-container__right'>
+            <section className='main-container__right'>
                 <Lifebuoys/>
                 <Prizes/>
             </section>

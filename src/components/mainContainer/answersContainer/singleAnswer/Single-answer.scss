@@ -1,7 +1,7 @@
 @import "src/style/variables/variables";
 @import "src/style/mixins/mixins";
 
-.Single-answer {
+.single-answer {
   @include flex-center-center;
   position: relative;
   z-index: 2;
@@ -101,25 +101,25 @@
   }
 
   &--disabled {
-    .Single-answer__squares, .Single-answer__content {
+    .single-answer__squares, .single-answer__content {
       background: $grey;
     }
   }
 
   &--correct {
-    .Single-answer__squares, .Single-answer__content {
+    .single-answer__squares, .single-answer__content {
       background: $light-green-correct;
     }
   }
 
   &--incorrect {
-    .Single-answer__squares, .Single-answer__content {
+    .single-answer__squares, .single-answer__content {
       background: $red-incorrect;
     }
   }
 
   &--checking {
-    .Single-answer__squares, .Single-answer__content {
+    .single-answer__squares, .single-answer__content {
       background: $orange;
     }
   }
@@ -131,28 +131,28 @@
   }
 }
 
-@media screen and (min-width: 600px) {
-  .Single-answer, .Single-answer__onclick {
+@media screen and (min-width: $small-screen) {
+  .single-answer, .single-answer__onclick {
     width: 28rem;
   }
 }
 
-@media screen and (min-width: 1100px) {
-  .Single-answer {
+@media screen and (min-width: $medium-screen) {
+  .single-answer {
     height: 5rem;
     font-size: 1.2rem;
 
     &__squares {
       width: 4rem;
       height: 4rem;
-      border-radius: 26% 0 26% 0;
+      border-radius: $answer-squares-radius;
     }
 
-    &__squares:first-child, .Single-answer__onclick-squares--first {
+    &__squares:first-child, .single-answer__onclick-squares--first {
       left: -2.5rem
     }
 
-    &__squares:nth-child(2), .Single-answer__onclick-squares--second {
+    &__squares:nth-child(2), .single-answer__onclick-squares--second {
       right: -2.5rem
     }
 
@@ -164,17 +164,19 @@
       top: 0;
       width: 4rem;
       height: 4rem;
-      border-radius: 26% 0 26% 0;
+      border-radius: $answer-squares-radius;
     }
 
-    &__content p {
+    &__content {
+      p {
       left: 1.5rem
+      }
     }
   }
 }
 
-@media screen and (min-width: 1400px) {
-  .Single-answer {
+@media screen and (min-width: $big-screen) {
+  .single-answer {
     margin: 1rem 3.2rem;
     width: 25rem;
 
@@ -188,14 +190,14 @@
   }
 }
 
-@media screen and (min-width: 1600px) {
-  .Single-answer, .Single-answer__onclick {
+@media screen and (min-width: $huge-screen) {
+  .single-answer, .single-answer__onclick {
     width: 32rem;
   }
 }
 
-@media screen and (min-width: 1800px) {
-  .Single-answer, .Single-answer__onclick {
+@media screen and (min-width: $biggest-screen) {
+  .single-answer, .single-answer__onclick {
     width: 38rem;
   }
 }

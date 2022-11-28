@@ -14,13 +14,13 @@ const SinglePrize = ({prizeAmount, index}: SinglePrizeProps) => {
 
     return (
         <li className={`${
-            (index + 1) % 5 === 0 ? 'Single-prize Single-prize__white-theme' : 'Single-prize'} ${
-            index < currentQuestionIndex ? 'Single-prize--guaranteed-stake' : ''} ${
-            currentQuestionIndex === index ? 'Single-prize--current-stake' : ''}`}
+            (index + 1) % 5 === 0 ? 'single-prize single-prize__white-theme' : 'single-prize'} ${
+            index < currentQuestionIndex ? 'single-prize--guaranteed-stake' : ''} ${
+            currentQuestionIndex === index ? 'single-prize--current-stake' : ''}`}
         >
-            <p className='Single-prize__number'>{index + 1}</p>
-            <span className='Single-prize__diamond'/>
-            <span className='Single-prize__value'>{prizeAmount}</span>
+            <p className='single-prize__number'>{index + 1}</p>
+            <span className='single-prize__diamond'/>
+            <span className='single-prize__value'>{prizeAmount}</span>
             <span>usd</span>
         </li>
     )

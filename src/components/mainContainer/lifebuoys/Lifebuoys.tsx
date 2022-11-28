@@ -6,7 +6,7 @@ import PhoneFriend from "./PhoneFriend/PhoneFriend";
 
 const Lifebuoys = () => {
     return (
-        <div className="Lifebuoys">
+        <div className="lifebuoys">
             <AskAudience/>
             <FiftyFifty/>
             <PhoneFriend/>

@@ -1,7 +1,6 @@
-@import 'src/style/variables/variables';
 @import 'src/style/mixins/mixins';
 
-.Question {
+.question {
   @include flex-center-center;
   position: relative;
   z-index: 2;
@@ -33,7 +32,7 @@
 }
 
 @media screen and (min-width: 600px) {
-  .Question {
+  .question {
     width: 26rem;
     height: 8rem;
 
@@ -45,7 +44,7 @@
       transform: rotate(45deg);
       z-index: 0;
       border: .5rem solid $white;
-      border-radius: 21% 0 22% 0;
+      border-radius: $question-squares-radius;
 
       &:first-child {
         background: rgb(0,34,144);
@@ -64,8 +63,8 @@
   }
 }
 
-@media screen and (min-width: 1400px) {
-  .Question {
+@media screen and (min-width: $big-screen) {
+  .question {
     width: 50rem;
     height: 8rem;
     font-size: 1.2rem;
