@@ -2,9 +2,9 @@
 @import "src/style/mixins/mixins";
 
 .Single-answer {
+  @include flex-center-center;
   position: relative;
   z-index: 2;
-  @include flex-center-center;
   width: 12rem;
   height: 3rem;
   margin: 1rem;
@@ -84,9 +84,9 @@
     overflow-wrap: anywhere;
 
     & p {
+      @include flex-center-center;
       position: absolute;
       left: 1.3rem;
-      @include flex-center-center;
       height: 1.8rem;
       margin: 0.6rem 0.4rem;
     }

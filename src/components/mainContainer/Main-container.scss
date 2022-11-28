@@ -13,8 +13,8 @@
   }
 
   &__right {
-    background: $main-container-right-gradient;
     @include flex-center-center;
+    background: $main-container-right-gradient;
     flex-direction: column;
   }
 }

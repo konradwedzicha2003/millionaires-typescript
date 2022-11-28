@@ -2,16 +2,17 @@ import React from "react";
 import './Single-answer.scss'
 
 export interface SingleAnswerProps {
-    answerContent: string
+    answerContent: string,
+    isCorrect: boolean,
 }
 
-const SingleAnswer = ({answerContent}: SingleAnswerProps) => {
+const SingleAnswer = ({answerContent, isCorrect}: SingleAnswerProps) => {
 
     return (
         <li key={answerContent} className='Single-answer'>
             <div className='Single-answer__squares Single-answer__squares--first'/>
             <div className='Single-answer__squares Single-answer__squares--second'/>
-            <button className='Single-answer__onclick'>
+            <button value={`${isCorrect}`} className='Single-answer__onclick'>
                 <div className='Single-answer__onclick-squares Single-answer__onclick-squares--first'/>
                 <div className='Single-answer__onclick-squares Single-answer__onclick-squares--second'/>
                 </button>

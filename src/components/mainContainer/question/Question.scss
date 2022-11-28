@@ -2,9 +2,9 @@
 @import 'src/style/mixins/mixins';
 
 .Question {
+  @include flex-center-center;
   position: relative;
   z-index: 2;
-  @include flex-center-center;
   width: 14rem;
   height: 12rem;
   font-size: 0.8rem;

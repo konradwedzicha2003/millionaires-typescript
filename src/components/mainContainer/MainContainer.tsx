@@ -1,7 +1,7 @@
 import React from "react";
 import Logo from "./logo/Logo";
 import Question from "./question/Question";
-import Answers from "./answersContainer/AnswersContainer";
+import AnswersContainer from "./answersContainer/AnswersContainer";
 import Lifebuoys from "./lifebuoys/Lifebuoys";
 import Prizes from "./prizes/Prizes";
 import './Main-container.scss'
@@ -12,7 +12,7 @@ const MainContainer = () => {
             <section className='Main-container__left'>
                 <Logo/>
                 <Question/>
-                <Answers/>
+                <AnswersContainer/>
             </section>
             <section className='Main-container__right'>
                 <Lifebuoys/>

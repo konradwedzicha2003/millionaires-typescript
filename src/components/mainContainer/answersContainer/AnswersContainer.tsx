@@ -2,18 +2,12 @@ import React from "react";
 import './Answers-container.scss'
 import SingleAnswer from "./singleAnswer/SingleAnswer";
 import { useSelector } from "react-redux";
-
-type Answer = {
-    answer: string
-}
-
-type StoreData = {
-    data: {question: string, answers: Answer[]}[],
-}
+import {getCurrentAnswers} from "../../../store/selectors/questionsAndAnswers/questionsAndAnswers";
+import {Answer} from "../../../store/reducers/questionsAndAnswers/questionsAndAnswers";
 
 const AnswersContainer = () => {
 
-    const answers: Answer[] = useSelector((state: StoreData) => state.data[0].answers)
+    const answers = useSelector(getCurrentAnswers)
 
     return (
         <ul className='Answers-container'>
@@ -21,7 +15,7 @@ const AnswersContainer = () => {
             <div className='Answers-container__line'/>
 
             {answers.map((el: Answer) => {
-                return <SingleAnswer answerContent={el.answer}/>
+                return <SingleAnswer key={el.answer} isCorrect={el.isCorrect} answerContent={el.answer}/>
             })}
         </ul>
     )
