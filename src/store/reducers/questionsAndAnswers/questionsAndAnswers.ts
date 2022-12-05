@@ -3,6 +3,7 @@ import {questionAndAnswers} from "../../../data/questionsAndAnswers/questionsAnd
 export type Answer = {
     answer: string,
     isCorrect: boolean
+    letter: string
 }
 
 export type Answers = Answer[]
@@ -21,12 +22,16 @@ const initialState = {
 
 const questionsAndAnswers = (state = initialState, action: {type: string}) => {
     switch (action.type) {
-        case "answerCorrect":
+        case "setNextQuestion":
             return {
                 data: [...questionAndAnswers],
                 currentQuestionIndex: state.currentQuestionIndex += 1
             }
-
+        case "RESET_GAME":
+            return {
+                data: [...questionAndAnswers],
+                currentQuestionIndex: 0
+            }
         default:
             return state
     }

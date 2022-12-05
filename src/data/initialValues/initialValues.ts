@@ -1,4 +1,13 @@
 export const initialValues = {
+    answerCheckAndMarkDelay: 2000,
+    isGameOver: false,
+    isGameWon: false,
+    disablePhoneFriend: false,
+    isFriendCalled: false,
+    disableAskAudience: false,
+    isAudienceAsked: false,
+    isFiftyFiftyUsed: false,
+    showAnswer: false,
     prizes: [
         {number: "100"},
         {number: "200"},
@@ -15,5 +24,5 @@ export const initialValues = {
         {number: "250,000"},
         {number: "500,000"},
         {number: "1,000,000"},
-    ]
+    ],
 }

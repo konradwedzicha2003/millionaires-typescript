@@ -9,15 +9,15 @@ export const questionAndAnswers = [
 
     {   question: 'question 1',
         answers: [
-            {answer: 'answer-content-1 of question-1 --true', isCorrect: true},
+            {answer: 'answer-content-1 of question-1'},
             {answer: 'answer-content-2 of question-1'},
-            {answer: 'answer-content-3 of question-1'},
+            {answer: 'answer-content-3 of question-1 --true', isCorrect: true},
             {answer: 'answer-content-4 of question-1'},]
     },
     {   question: 'question 2',
         answers: [
-            {answer: 'answer-content-1 of question-2 --true', isCorrect: true},
-            {answer: 'answer-content-2 of question-2'},
+            {answer: 'answer-content-1 of question-2'},
+            {answer: 'answer-content-2 of question-2 --true', isCorrect: true},
             {answer: 'answer-content-3 of question-2'},
             {answer: 'answer-content-4 of question-2'},]
     },
@@ -30,16 +30,16 @@ export const questionAndAnswers = [
     },
     {   question: 'question 4',
         answers: [
-            {answer: 'answer-content-1 of question-4 --true', isCorrect: true},
+            {answer: 'answer-content-1 of question-4'},
             {answer: 'answer-content-2 of question-4'},
             {answer: 'answer-content-3 of question-4'},
-            {answer: 'answer-content-4 of question-4'},]
+            {answer: 'answer-content-4 of question-4 --true', isCorrect: true},]
     },
     {   question: 'question 5',
         answers: [
-            {answer: 'answer-content-1 of question-5 --true', isCorrect: true},
+            {answer: 'answer-content-1 of question-5'},
             {answer: 'answer-content-2 of question-5'},
-            {answer: 'answer-content-3 of question-5'},
+            {answer: 'answer-content-3 of question-5 --true', isCorrect: true},
             {answer: 'answer-content-4 of question-5'},]
     },
     {   question: 'question 6',

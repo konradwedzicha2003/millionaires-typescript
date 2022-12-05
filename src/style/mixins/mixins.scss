@@ -51,3 +51,13 @@
 @mixin wide-screen {
   max-width: 110px;
 }
+
+@mixin game-end-notification {
+  @include flex-center-center;
+  flex-direction: column;
+  width: 24rem;
+  height: 10rem;
+  background: $question-answers-gradient;
+  border: .5rem solid $white;
+  color: $white;
+}

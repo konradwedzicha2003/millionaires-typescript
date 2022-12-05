@@ -8,12 +8,20 @@
     align-items: center;
     flex-direction: column;
     border-bottom: 0.5rem solid $white;
+
+    &--darkened {
+      filter: $darkening
+    }
   }
 
   &__right {
     @include flex-center-center;
     background: $main-container-right-gradient;
     flex-direction: column;
+
+    &--darkened {
+      filter: $darkening
+    }
   }
 }
 

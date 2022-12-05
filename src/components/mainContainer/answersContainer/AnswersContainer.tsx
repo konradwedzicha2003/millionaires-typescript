@@ -1,14 +1,28 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import './Answers-container.scss'
 import SingleAnswer from "./singleAnswer/SingleAnswer";
 import { useSelector } from "react-redux";
 import {getCurrentAnswers} from "../../../store/selectors/questionsAndAnswers/questionsAndAnswers";
 import {Answer} from "../../../store/reducers/questionsAndAnswers/questionsAndAnswers";
+import {useShuffleArray} from "../../../hooks/useShuffleArray";
+import {getIsFiftyFiftyUsed} from "../../../store/selectors/lifebuoys/lifebuoys";
 
 const AnswersContainer = () => {
 
-    const [isDisabled, setIsAnswerDisabled] = useState(false)
+    const [disabledAnswers, setDisabledAnswers] = useState<Answer[]>()
+    const [isAnswerDisabled, setIsAnswerDisabled] = useState(false)
+
+    const currentAnswers =useSelector(getCurrentAnswers)
     const answers = useSelector(getCurrentAnswers)
+    const isFiftyFiftyUsed = useSelector(getIsFiftyFiftyUsed)
+
+    useEffect(() => {
+        if (isFiftyFiftyUsed) {
+            const newDisabledAnswers = currentAnswers.filter((el: Answer) => !el.isCorrect).sort(useShuffleArray)
+            newDisabledAnswers.length = 2
+            setDisabledAnswers(newDisabledAnswers)
+        }
+    }, [isFiftyFiftyUsed])
 
     return (
         <ul className='answers-container'>
@@ -17,9 +31,10 @@ const AnswersContainer = () => {
                 {answers.map((el: Answer, index) => {
                     return <SingleAnswer
                         key={el.answer}
+                        disabledAnswers={disabledAnswers}
                         isCorrect={el.isCorrect}
                         answerContent={el.answer}
-                        isDisabled={isDisabled}
+                        isAnswerDisabled={isAnswerDisabled}
                         setIsAnswerDisabled={setIsAnswerDisabled}
                         index={index}
                     />
