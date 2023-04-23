@@ -25,3 +25,13 @@ tsconfig.json
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Default ignored files
+/shelf/
+/.idea
+*style.css.map*
+**/*.css.map
+**/style.css.map
+# Editor-based HTTP Client requests
+/httpRequests/
+

@@ -1,10 +1,10 @@
 import React from 'react';
+import Millionaires from "./components/Millionaires";
+import './style/style.scss'
 
 function App() {
   return (
-    <div className="App">
-      <p>Millionerzy typescript</p>
-    </div>
+      <Millionaires />
   );
 }
 
