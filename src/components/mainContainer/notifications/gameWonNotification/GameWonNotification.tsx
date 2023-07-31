@@ -11,9 +11,9 @@ const GameWonNotification = () => {
     return (
         <div className={`${isGameWon ? 'game-won-notification--shown' : 'hidden'}`}>
             <p>
-                Woooooo MILION no dobra to teraz można spokojnie lecieć za granice i kupić 1kg cukru
+                Wooooooah MILLION dollars is now yours... now you can make your dreams come true!
             </p>
-            <button onClick={useResetGame}>To nie wystarczy... potrzebuje więcej!</button>
+            <button onClick={useResetGame}>That's not enough... I need more!</button>
         </div>
     )
 }

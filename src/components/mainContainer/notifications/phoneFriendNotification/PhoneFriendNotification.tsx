@@ -28,8 +28,8 @@ const PhoneFriendNotification = () => {
             hintLetters.sort(useShuffleArray)
 
             const hints = [
-                `Wydaje mi sie że to ${hintLetters[0]} ale możę też być ${hintLetters[1]}`,
-                `Jestem pewny że to ${correctAnswerWithLetter?.letter} widziałem w Galileo!`
+                `I think it can be ${hintLetters[0]} but it also can be ${hintLetters[1]}`,
+                `I am sure that it is ${correctAnswerWithLetter?.letter} I saw it in Galileo!`
             ]
             hints.sort(useShuffleArray)
             setFriendHint(hints[0])

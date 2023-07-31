@@ -15,12 +15,12 @@ const GameOverNotification = () => {
     return (
         <div className={`${isGameOver ? 'game-over-notification--shown' : 'hidden'}`}>
             <p>
-                {currentQuestionIndex === 0 ? 'Nie no serio nawet 100 cebulionów nie wygrałeś?': ''}
-                {currentQuestionIndex > 0 && currentQuestionIndex < 8 ? `Wygrałeś ${prizes[currentQuestionIndex].number}usd gratki ` : ''}
-                {currentQuestionIndex > 7 && currentQuestionIndex < 10 ? `Wygrałeś ${prizes[currentQuestionIndex].number}usd tu sie zaczynają poważne pieniądze` : ''}
-                {currentQuestionIndex > 9 ? ` ${prizes[currentQuestionIndex].number}usd no dobra teraz to możesz nawet przegrać za tyle to ułożysz se życie na nowo ` : ''}
+                {currentQuestionIndex === 0 ? 'Really man? You could not even get these 100 dollars?': ''}
+                {currentQuestionIndex > 0 && currentQuestionIndex < 8 ? `You won ${prizes[currentQuestionIndex].number}usd, congrats ` : ''}
+                {currentQuestionIndex > 7 && currentQuestionIndex < 10 ? `You won ${prizes[currentQuestionIndex].number}usd, here is where the real game starts.` : ''}
+                {currentQuestionIndex > 9 ? ` ${prizes[currentQuestionIndex].number}usd, ok with that cash you can start your life anew. ` : ''}
             </p>
-            <button onClick={useResetGame}>Ja chce jeszcze raz!</button>
+            <button onClick={useResetGame}>I want to play again!</button>
         </div>
     )
 }
